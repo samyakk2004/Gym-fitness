@@ -28,9 +28,13 @@ $red: rgb(224, 73, 73);
     ul {
         list-style-type: none;
         list-style-position: inside;
+<<<<<<< HEAD
 
         li,
         a {
+=======
+        li {
+>>>>>>> c100f49 (Initial commit)
             text-align: center;
             display: inline-block;
             margin-right: 3rem;
@@ -39,6 +43,7 @@ $red: rgb(224, 73, 73);
             border-bottom: red;
             padding: 5px;
         }
+<<<<<<< HEAD
 
         li:hover,
         a:hover {
@@ -46,6 +51,13 @@ $red: rgb(224, 73, 73);
             border-bottom: 3px solid $red;
         }
         a:last-child {
+=======
+        li:hover {
+            cursor: pointer;
+            border-bottom: 3px solid $red;
+        }
+        li:last-child {
+>>>>>>> c100f49 (Initial commit)
             background-color: $red;
             color: white;
             padding: 2px;
@@ -53,23 +65,41 @@ $red: rgb(224, 73, 73);
             padding: 10px;
         }
 
+<<<<<<< HEAD
         a:last-child:hover {
             background-color: rgb(225, 48, 48);
+=======
+        li:last-child:hover {
+>>>>>>> c100f49 (Initial commit)
             border: none;
         }
     }
 }
 
+<<<<<<< HEAD
+=======
+// Navbar media query
+
+>>>>>>> c100f49 (Initial commit)
 @media screen and (max-width: 755px) {
     .navbar-container {
         @include center($direction: column);
         h1 {
             display: block;
         }
+<<<<<<< HEAD
 
         ul {
             margin-top: 2rem;
             @include center();
+=======
+        ul {
+            li {
+                margin-right: 0;
+                margin-top: 1rem;
+                display: block;
+            }
+>>>>>>> c100f49 (Initial commit)
         }
     }
 }
@@ -80,6 +110,10 @@ $red: rgb(224, 73, 73);
     @include center();
     div {
         position: relative;
+<<<<<<< HEAD
+=======
+        // z-index: 1;
+>>>>>>> c100f49 (Initial commit)
         margin-right: 1rem;
         h1 {
             color: $red;
@@ -120,6 +154,11 @@ $red: rgb(224, 73, 73);
     }
 }
 
+<<<<<<< HEAD
+=======
+// Header media query
+
+>>>>>>> c100f49 (Initial commit)
 @media screen and (max-width: 800px) {
     .header-container {
         padding: 2rem;
@@ -179,6 +218,10 @@ $red: rgb(224, 73, 73);
     div {
         @include center($direction: column);
         padding: 1.25rem;
+<<<<<<< HEAD
+=======
+        // border-radius: 5px;
+>>>>>>> c100f49 (Initial commit)
         width: 7rem;
     }
     div:hover {
@@ -201,7 +244,10 @@ $red: rgb(224, 73, 73);
 }
 
 // exercises container
+<<<<<<< HEAD
 
+=======
+>>>>>>> c100f49 (Initial commit)
 a {
     text-decoration: none;
     color: black;
@@ -217,6 +263,7 @@ a {
         font-size: 2rem;
     }
 
+<<<<<<< HEAD
     .exercise-card-container {
         @include center($main: space-evenly);
         flex-wrap: wrap;
@@ -412,3 +459,54 @@ a {
 }
 =======
 >>>>>>> a3a3e5e (added pagination to exercises)
+=======
+    div {
+        @include center($main: space-evenly);
+        flex-wrap: wrap;
+        column-gap: 5rem;
+        row-gap: 5rem;
+        margin: 1rem 0rem;
+        padding: 0rem 2rem;
+
+        .exercise {
+            display: block;
+            border-radius: 5px;
+            gap: 0rem;
+            width: 18rem;
+            padding: 1rem;
+
+            img {
+                width: 12rem;
+                display: block;
+                border-radius: 5px;
+            }
+            p {
+                margin-top: 1rem;
+                text-align: left;
+                font-family: "Roboto Condensed";
+            }
+            div {
+                display: block;
+                padding: 0;
+                span {
+                    font-weight: bold;
+                    font-size: 12px;
+                    margin-right: 10px;
+                    padding: 5px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                }
+                span:nth-child(1) {
+                    background-color: pink;
+                }
+                span:last-child {
+                    background-color: rgba(255, 223, 135, 255);
+                }
+            }
+        }
+        .exercise:hover {
+            box-shadow: 3px 5px 10px gray;
+        }
+    }
+}
+>>>>>>> c100f49 (Initial commit)

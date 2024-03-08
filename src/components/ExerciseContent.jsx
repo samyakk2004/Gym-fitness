@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { fetchSearchedData } from "../utils/fetchSearchedData";
@@ -30,4 +31,9 @@ export default function ExerciseContent() {
             <Footer />
         </>
     );
+=======
+
+export default function ExerciseContent() {
+    return <div>Soy hola!</div>;
+>>>>>>> c100f49 (Initial commit)
 }

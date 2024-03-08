@@ -19,7 +19,11 @@ export default function Search({ setExercises, part, setPart }) {
 
     useEffect(() => {
         async function randomFetch() {
+<<<<<<< HEAD
             const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 1000);
+=======
+            const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 500);
+>>>>>>> c100f49 (Initial commit)
             const searchedExercises = exerciseData.filter((exercise) => {
                 return (
                     exercise.bodyPart.toLowerCase().includes(search) ||
@@ -33,7 +37,11 @@ export default function Search({ setExercises, part, setPart }) {
         }
 
         randomFetch();
+<<<<<<< HEAD
     }, [part]);
+=======
+    }, [search]);
+>>>>>>> c100f49 (Initial commit)
 
     function handleSearch(e) {
         setSearch(e.target.value);
@@ -42,7 +50,11 @@ export default function Search({ setExercises, part, setPart }) {
     async function submitSearchInput(e) {
         e.preventDefault();
         console.log("hello");
+<<<<<<< HEAD
         const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 1000);
+=======
+        const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 500);
+>>>>>>> c100f49 (Initial commit)
         const searchedExercises = exerciseData.filter((exercise) => {
             return (
                 exercise.bodyPart.toLowerCase().includes(search) ||
@@ -51,7 +63,12 @@ export default function Search({ setExercises, part, setPart }) {
                 exercise.equipment.toLowerCase().includes(search)
             );
         });
+<<<<<<< HEAD
         setPart("");
+=======
+        setPart("all");
+        // setSearch("");
+>>>>>>> c100f49 (Initial commit)
         setExercises(searchedExercises);
     }
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import ExerciseCard from "./ExerciseCard";
 import ReactPaginate from "react-paginate";
@@ -41,6 +42,28 @@ export default function Exercises({ part, setExercises, exercises }) {
                     containerClassName="paginate-container"
                     pageClassName="paginate-page"
                 />
+=======
+import React from "react";
+import ExerciseCard from "./ExerciseCard";
+
+export default function Exercises({ part, setExercises, exercises }) {
+    return (
+        <div className="exercises-container">
+            <h3>Showing results</h3>
+            <div>
+                {exercises.map((item) => {
+                    return (
+                        <ExerciseCard
+                            key={item.id}
+                            id={item.id}
+                            image={item.gifUrl}
+                            name={item.name}
+                            part={item.bodyPart}
+                            type={item.equipment}
+                        />
+                    );
+                })}
+>>>>>>> c100f49 (Initial commit)
             </div>
         </div>
     );
