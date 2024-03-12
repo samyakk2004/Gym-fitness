@@ -220,8 +220,13 @@ a {
     .exercise-card-container {
         @include center($main: space-evenly);
         flex-wrap: wrap;
+<<<<<<< HEAD
         gap: 3rem;
         margin: 2rem 0rem;
+=======
+        column-gap: 5rem;
+        margin: 1rem 0rem;
+>>>>>>> a3a3e5e (added pagination to exercises)
         padding: 0rem 2rem;
     }
 }
@@ -257,9 +262,12 @@ a {
         }
     }
 }
+<<<<<<< HEAD
 .exercise-card:hover {
     box-shadow: 3px 5px 10px gray;
 }
+=======
+>>>>>>> a3a3e5e (added pagination to exercises)
 
 // pagination styling
 
@@ -300,6 +308,7 @@ a {
         font-family: "Roboto Condensed";
     }
 }
+<<<<<<< HEAD
 
 // exercise content
 
@@ -401,3 +410,5 @@ a {
         line-height: 1.5rem;
     }
 }
+=======
+>>>>>>> a3a3e5e (added pagination to exercises)
