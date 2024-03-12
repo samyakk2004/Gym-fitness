@@ -19,7 +19,7 @@ export default function Search({ setExercises, part, setPart }) {
 
     useEffect(() => {
         async function randomFetch() {
-            const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 500);
+            const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 1000);
             const searchedExercises = exerciseData.filter((exercise) => {
                 return (
                     exercise.bodyPart.toLowerCase().includes(search) ||
@@ -33,7 +33,7 @@ export default function Search({ setExercises, part, setPart }) {
         }
 
         randomFetch();
-    }, [search]);
+    }, [part]);
 
     function handleSearch(e) {
         setSearch(e.target.value);
@@ -42,7 +42,7 @@ export default function Search({ setExercises, part, setPart }) {
     async function submitSearchInput(e) {
         e.preventDefault();
         console.log("hello");
-        const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 500);
+        const exerciseData = await fetchSearchedData("https://exercisedb.p.rapidapi.com/exercises", 1000);
         const searchedExercises = exerciseData.filter((exercise) => {
             return (
                 exercise.bodyPart.toLowerCase().includes(search) ||
@@ -51,8 +51,7 @@ export default function Search({ setExercises, part, setPart }) {
                 exercise.equipment.toLowerCase().includes(search)
             );
         });
-        setPart("all");
-        // setSearch("");
+        setPart("");
         setExercises(searchedExercises);
     }
 

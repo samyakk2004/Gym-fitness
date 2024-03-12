@@ -223,7 +223,6 @@ a {
         @include center($main: space-evenly);
         flex-wrap: wrap;
         column-gap: 5rem;
-        row-gap: 5rem;
         margin: 1rem 0rem;
         padding: 0rem 2rem;
 
@@ -266,5 +265,45 @@ a {
         .exercise:hover {
             box-shadow: 3px 5px 10px gray;
         }
+    }
+}
+
+// pagination styling
+
+.paginate-container {
+    @include center();
+    column-gap: 2.5rem;
+    list-style-type: none;
+    width: 100vw;
+    text-align: center;
+    margin-top: 2rem;
+    // font-family: "Roboto Condensed";
+    .paginate-page {
+        font-size: 1.25rem;
+        padding: 2px 20px;
+        box-shadow: 3px 3px 7px grey;
+        border-radius: 5px;
+        :hover {
+            cursor: pointer;
+        }
+    }
+
+    .paginate-next,
+    .paginate-prev {
+        cursor: pointer;
+        font-size: 2rem;
+    }
+}
+
+// Footer
+
+.footer-container {
+    @include center();
+    background-color: $red;
+    padding: 5rem;
+    margin-top: 5rem;
+    h1 {
+        color: white;
+        font-family: "Roboto Condensed";
     }
 }
