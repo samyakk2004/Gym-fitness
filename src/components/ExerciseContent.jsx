@@ -3,10 +3,8 @@ import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import { fetchSearchedData } from "../utils/fetchSearchedData";
 import Navbar from "./Navbar";
-import quipmentImage from "../assets/icons/equipment.png";
-import bodyPartImage from "../assets/icons/body-part.png";
-import targetImage from "../assets/icons/target.png";
 import Footer from "./Footer";
+import ExerciseInfo from "./ExerciseInfo";
 
 export default function ExerciseContent() {
     const [content, setContent] = useState(null); // Initialize content state as null
@@ -25,37 +23,7 @@ export default function ExerciseContent() {
         <>
             <Navbar />
             <div className="exercise-content-container">
-                {content ? (
-                    <>
-                        <img src={content.gifUrl} alt={content.name} />
-                        <div>
-                            <h1>{content.name}</h1>
-                            {content.instructions.length > 0 && (
-                                <ul>
-                                    {content.instructions.map((item, index) => (
-                                        <li key={index}>{item}</li>
-                                    ))}
-                                </ul>
-                            )}
-                            <div>
-                                <div className="content-info">
-                                    <img src={bodyPartImage} />
-                                    <p>{content.bodyPart}</p>
-                                </div>
-                                <div className="content-info">
-                                    <img src={targetImage} />
-                                    <p>{content.target}</p>
-                                </div>
-                                <div className="content-info">
-                                    <img src={quipmentImage} />
-                                    <p>{content.equipment}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </>
-                ) : (
-                    <p>Loading...</p>
-                )}
+                {content ? <ExerciseInfo content={content} /> : <p>Loading...</p>}
             </div>
             <Footer />
         </>

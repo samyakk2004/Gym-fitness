@@ -172,18 +172,19 @@ $red: rgb(224, 73, 73);
 // body parts container
 
 .body-parts-container {
-    @include center($direction: column);
-    width: 5rem;
-    display: inline-block;
-    // div {
-    //     padding: 1.25rem;
-    //     // border-radius: 5px;
-    //     width: 7rem;
-    // }
-    // div:hover {
-    //     border-top: 3px solid $red;
-    //     cursor: pointer;
-    // }
+    @include center();
+    gap: 0.5rem;
+    margin-top: 5rem;
+    height: 8rem;
+    div {
+        @include center($direction: column);
+        padding: 1.25rem;
+        width: 7rem;
+    }
+    div:hover {
+        border-top: 3px solid $red;
+        cursor: pointer;
+    }
     img {
         height: 2rem;
     }
