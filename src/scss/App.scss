@@ -382,3 +382,22 @@ a {
 >>>>>>> 2b453bc (Added similar (recommended)  exercises component)
     }
 }
+
+.about-container {
+    padding: 0rem 3rem;
+    h1 {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        font-size: 2.5rem;
+        margin-top: 2rem;
+        display: inline-block;
+        padding-right: 2rem;
+        border-bottom: 3px solid $red;
+    }
+    p {
+        margin: 1rem 0rem 0rem 2rem;
+        width: 80%;
+        text-align: justify;
+        font-family: "Roboto Condensed";
+        line-height: 1.5rem;
+    }
+}
