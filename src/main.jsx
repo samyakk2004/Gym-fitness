@@ -4,6 +4,8 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home.jsx";
 import ExerciseContent from "./components/ExerciseContent";
+import HomeContent from "./components/HomeContent";
+import About from "./components/About";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
     {
         path: "/:id",
         element: <ExerciseContent />,
+    },
+    {
+        path: "/about",
+        element: <About />,
     },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

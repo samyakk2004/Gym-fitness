@@ -27,7 +27,7 @@ export default function Exercises({ part, setExercises, exercises }) {
     }
 
     return (
-        <div className="exercises-container">
+        <div className="exercises-container" id="exercises">
             <h3>Showing results</h3>
             <div>
                 {displayItems}

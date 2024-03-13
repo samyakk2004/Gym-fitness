@@ -8,7 +8,7 @@ export default function BodyPart({ item, part, setPart, itemId, setSearch }) {
     }
 
     return (
-        <div onClick={bodyPartClickHandler} className={item === part ? "selected-part" : ""}>
+        <div onClick={bodyPartClickHandler} className={`body-parts-container ${item === part ? "selected-part" : ""}`}>
             <img src={gym} />
             <p>{item}</p>
         </div>
