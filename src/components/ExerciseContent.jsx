@@ -5,6 +5,7 @@ import { fetchSearchedData } from "../utils/fetchSearchedData";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ExerciseInfo from "./ExerciseInfo";
+import ExerciseRecomendation from "./ExerciseRecomendation";
 
 export default function ExerciseContent() {
     const [content, setContent] = useState(null); // Initialize content state as null
@@ -25,6 +26,7 @@ export default function ExerciseContent() {
             <div className="exercise-content-container">
                 {content ? <ExerciseInfo content={content} /> : <p>Loading...</p>}
             </div>
+            {content && <ExerciseRecomendation target={content.target} />}
             <Footer />
         </>
     );

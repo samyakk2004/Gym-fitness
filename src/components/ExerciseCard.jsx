@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function ExerciseCard({ id, image, name, part, type }) {
     return (
         <Link to={`/${id}`}>
-            <div className="exercise">
+            <div className="exercise-card">
                 <img src={image} />
                 <p>{name}</p>
                 <div>

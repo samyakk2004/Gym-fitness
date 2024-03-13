@@ -5,7 +5,7 @@ import ReactPaginate from "react-paginate";
 export default function Exercises({ part, setExercises, exercises }) {
     const [pageNumber, setPageNumber] = useState(0);
 
-    const itemsPerPage = 12;
+    const itemsPerPage = 16;
     const itemsVisited = pageNumber * itemsPerPage;
     const pageCount = Math.ceil(exercises.length / itemsPerPage);
 
@@ -29,7 +29,7 @@ export default function Exercises({ part, setExercises, exercises }) {
     return (
         <div className="exercises-container" id="exercises">
             <h3>Showing results</h3>
-            <div>
+            <div className="exercise-card-container">
                 {displayItems}
                 <ReactPaginate
                     previousLabel="⤶"
