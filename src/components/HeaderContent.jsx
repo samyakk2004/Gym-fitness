@@ -11,7 +11,6 @@ export default function HeaderContent() {
                 </p>
                 <span>Best curated exercises from all over the internet</span>
                 <button href="#exercises">Check exercises</button>
-                <strong>Exercise</strong>
             </div>
             <img src={banner} />
         </div>

@@ -103,14 +103,6 @@ $red: rgb(224, 73, 73);
             cursor: pointer;
             box-shadow: 3px 5px 10px 1px $white;
         }
-
-        strong {
-            position: absolute;
-            z-index: 2;
-            margin-left: 2rem;
-            color: rgba(253, 126, 147, 0.7);
-            font-size: 10rem;
-        }
     }
     img {
         position: relative;
@@ -142,29 +134,37 @@ $red: rgb(224, 73, 73);
 
 .search-container {
     @include center($direction: column);
-    margin-top: 1.25rem;
-    padding-top: 6rem;
+    margin-top: 3rem;
     h2 {
-        font-size: 2.75rem;
+        font-size: 1.75rem;
         margin-bottom: 3rem;
     }
     form {
+        width: 50rem;
         input {
             background-color: $white;
             border: none;
             outline: none;
             border-radius: 5px 0px 0px 5px;
             padding: 1rem;
-            width: calc(20vw * 2);
+            width: 80%;
         }
         button {
+            width: 20%;
             border-radius: 0px 5px 5px 0px;
             padding: 1rem;
             border: none;
             background-color: rgb(254, 99, 99);
             color: white;
-            width: 7rem;
             cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .search-container {
+        form {
+            width: 30rem;
         }
     }
 }
@@ -174,7 +174,7 @@ $red: rgb(224, 73, 73);
 .body-parts-container {
     @include center();
     gap: 0.5rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
     height: 8rem;
     div {
         @include center($direction: column);
@@ -215,12 +215,18 @@ a {
     h3 {
         text-align: center;
         font-size: 2rem;
+        border-bottom: 3px solid $red;
+        width: 20rem;
+        margin-inline: auto;
+        padding-bottom: 0.5rem;
     }
 
     .exercise-card-container {
         @include center($main: space-evenly);
         flex-wrap: wrap;
-        gap: 3rem;
+        gap: 5rem;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr 1fr;
         margin: 2rem 0rem;
         padding: 0rem 2rem;
     }
