@@ -7,8 +7,12 @@ import ExerciseContent from "./components/ExerciseContent";
 <<<<<<< HEAD
 import HomeContent from "./components/HomeContent";
 import About from "./components/About";
+<<<<<<< HEAD
 =======
 >>>>>>> c100f49 (Initial commit)
+=======
+import Contact from "./components/Contact";
+>>>>>>> 00a3dcee6389facb7440d697b7e833b205da6f69
 
 const router = createBrowserRouter([
     {

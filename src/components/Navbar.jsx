@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
     return (
         <div className="navbar-container">
-            <h1>Curls</h1>
+            <h1>Bulk Home</h1>
             <ul>
 <<<<<<< HEAD
                 <Link to="/">Home</Link>
