@@ -10,9 +10,10 @@ export default function About() {
                 <p>
                     I'm a web developer from India. Currently I'm an undergrad student pursuing Bachelor's in computer
                     science. I have a solid 3 years of experience in Web developement which includes basics from HTML,
-                    CSS, JS all the way to React, Redux, React-Router. I'm currently looking for jobs and internships to
+                    CSS, JS, Nodejs all the way to React, Expressjs and MongoDB. I'm currently looking for jobs and internships to
                     start off my engineering career. Hope you find this project up to the mark. Feel free to contact me
-                    for any oppurtunities. I would be more than obliged if you do so. Thank you have a nice day.
+                    for any oppurtunities. This is my contact number: 8617382715.I would be more than obliged if you do so. 
+                    Thank you have a nice day!
                 </p>
                 <h1>About the API</h1>
                 <p>

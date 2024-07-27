@@ -6,6 +6,7 @@ import Home from "./Home.jsx";
 import ExerciseContent from "./components/ExerciseContent";
 import HomeContent from "./components/HomeContent";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 const router = createBrowserRouter([
     {
