@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat&family=Raleway&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+$white: rgb(227, 227, 227);
+$red: rgb(224, 73, 73);
+* {
+    font-family: "Montserrat";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin center($main: center, $cross: center, $direction: row) {
+    display: flex;
+    justify-content: $main;
+    align-items: $cross;
+    flex-direction: $direction;
+}
+
+// Navbar
+
+.navbar-container {
+    background-color: $white;
+    padding: 1rem;
+    @include center(space-between);
+
+    h1 {
+        display: inline-block;
+    }
+    ul {
+        list-style-type: none;
+        list-style-position: inside;
+
+        li,
+        a {
+            text-align: center;
+            display: inline-block;
+            margin-right: 3rem;
+            font-family: "Roboto Condensed";
+            width: 7rem;
+            border-bottom: red;
+            padding: 5px;
+        }
+
+        li:hover,
+        a:hover {
+            cursor: pointer;
+            border-bottom: 3px solid $red;
+        }
+        a:last-child {
+            background-color: $red;
+            color: white;
+            padding: 2px;
+            border-radius: 3px;
+            padding: 10px;
+        }
+
+        a:last-child:hover {
+            background-color: rgb(225, 48, 48);
+            border: none;
+        }
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .navbar-container {
+        @include center($direction: column);
+        h1 {
+            display: block;
+        }
+
+        ul {
+            margin-top: 2rem;
+            @include center();
+        }
+    }
+}
+
+// Header
+
+.header-container {
+    @include center();
+    div {
+        position: relative;
+        margin-right: 1rem;
+        h1 {
+            color: $red;
+            font-size: 1.35rem;
+        }
+        p {
+            font-family: "Roboto Condensed";
+            font-size: 2.75rem;
+        }
+        button {
+            margin-top: 1.25rem;
+            display: block;
+            padding: 0.45rem;
+            border: none;
+            background-color: $red;
+            color: white;
+            border-radius: 3px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            box-shadow: 3px 5px 10px 1px $white;
+        }
+
+        strong {
+            position: absolute;
+            z-index: 2;
+            margin-left: 2rem;
+            color: rgba(253, 126, 147, 0.7);
+            font-size: 10rem;
+        }
+    }
+    img {
+        position: relative;
+        z-index: 3;
+        height: 30rem;
+        opacity: 0.85;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .header-container {
+        padding: 2rem;
+        @include center($direction: column);
+        gap: 3rem;
+        div {
+            strong {
+                font-size: calc(8vw * 2);
+                margin-top: 27rem;
+                left: calc(-20vw / 2);
+            }
+        }
+        img {
+            height: 28rem;
+        }
+    }
+}
+
+// Search
+
+.search-container {
+    @include center($direction: column);
+    margin-top: 1.25rem;
+    padding-top: 6rem;
+    h2 {
+        font-size: 2.75rem;
+        margin-bottom: 3rem;
+    }
+    form {
+        input {
+            background-color: $white;
+            border: none;
+            outline: none;
+            border-radius: 5px 0px 0px 5px;
+            padding: 1rem;
+            width: calc(20vw * 2);
+        }
+        button {
+            border-radius: 0px 5px 5px 0px;
+            padding: 1rem;
+            border: none;
+            background-color: rgb(254, 99, 99);
+            color: white;
+            width: 7rem;
+            cursor: pointer;
+        }
+    }
+}
+
+// body parts container
+
+.body-parts-container {
+    @include center();
+    gap: 0.5rem;
+    margin-top: 5rem;
+    height: 8rem;
+    div {
+        @include center($direction: column);
+        padding: 1.25rem;
+        width: 7rem;
+    }
+    div:hover {
+        border-top: 3px solid $red;
+        cursor: pointer;
+    }
+    img {
+        height: 2rem;
+    }
+    p {
+        margin-top: 0.5rem;
+        text-align: center;
+        font-family: "Roboto Condensed";
+        font-weight: 500;
+    }
+}
+
+.selected-part {
+    border-top: 3px solid $red;
+}
+
+// exercises container
+
+a {
+    text-decoration: none;
+    color: black;
+    :active {
+        color: black;
+    }
+}
+
+.exercises-container {
+    margin-top: 2rem;
+    h3 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .exercise-card-container {
+        @include center($main: space-evenly);
+        flex-wrap: wrap;
+        gap: 3rem;
+        margin: 2rem 0rem;
+        padding: 0rem 2rem;
+    }
+}
+
+.exercise-card {
+    border-radius: 5px;
+    width: 18rem;
+    padding: 2rem;
+    display: block;
+    img {
+        width: 12rem;
+        border-radius: 5px;
+    }
+    p {
+        text-align: left;
+        font-family: "Roboto Condensed";
+    }
+    div {
+        margin-top: 1rem;
+        span {
+            font-weight: bold;
+            font-size: 12px;
+            margin-right: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        span:nth-child(1) {
+            background-color: pink;
+        }
+        span:last-child {
+            background-color: rgba(255, 223, 135, 255);
+        }
+    }
+}
+.exercise-card:hover {
+    box-shadow: 3px 5px 10px gray;
+}
+
+// pagination styling
+
+.paginate-container {
+    @include center();
+    column-gap: 2.5rem;
+    list-style-type: none;
+    width: 100vw;
+    text-align: center;
+    margin-top: 2rem;
+    // font-family: "Roboto Condensed";
+    .paginate-page {
+        font-size: 1.25rem;
+        padding: 2px 20px;
+        box-shadow: 3px 3px 7px grey;
+        border-radius: 5px;
+        :hover {
+            cursor: pointer;
+        }
+    }
+
+    .paginate-next,
+    .paginate-prev {
+        cursor: pointer;
+        font-size: 2rem;
+    }
+}
+
+// Footer
+
+.footer-container {
+    @include center();
+    background-color: $red;
+    padding: 5rem;
+    margin-top: 5rem;
+    h1 {
+        color: white;
+        font-family: "Roboto Condensed";
+    }
+}
+
+// exercise content
+
+.exercise-content-container {
+    @include center($direction: row);
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    gap: 10rem;
+    img {
+        height: 25rem;
+    }
+
+    div {
+        width: 40rem;
+        h1 {
+            text-transform: capitalize;
+            font-size: 2.75rem;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            list-style-type: none;
+            list-style-position: inside;
+
+            li {
+                font-family: "Roboto Condensed";
+                font-weight: 400;
+                margin-bottom: 0.35rem;
+            }
+        }
+        div {
+            margin-top: 2rem;
+            .content-info {
+                @include center($main: none);
+                img {
+                    background-color: rgb(255, 221, 109, 0.7);
+                    padding: 0.5rem;
+                    border-radius: 100%;
+                    height: 3.25rem;
+                }
+                p {
+                    display: inline-block;
+                    margin-left: 0.5rem;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .exercise-content-container {
+        gap: 0rem;
+        @include center($main: space-evenly);
+        flex-wrap: nowrap;
+
+        div {
+            width: 20rem;
+        }
+    }
+}
