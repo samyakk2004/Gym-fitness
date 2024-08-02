@@ -10,7 +10,7 @@ export default function HeaderContent() {
                     Sweat, Grind <br /> and Repeat
                 </p>
                 <span>Best curated exercises from all over the internet</span>
-                <button href="#exercises">Check exercises</button>
+                <button href="#exercises" class="check-exercise">Check exercises</button>
             </div>
             <img src={banner} />
         </div>
